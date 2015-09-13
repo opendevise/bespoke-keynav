@@ -2,10 +2,10 @@ Function.prototype.bind = Function.prototype.bind || require('function-bind');
 
 var simulant = require('simulant'),
   bespoke = require('bespoke'),
-  keynav = require('../../lib/bespoke-keynav.js'),
+  navkbd = require('../../lib/bespoke-nav-kbd.js'),
   forms = require('bespoke-forms');
 
-describe('bespoke-keynav', function() {
+describe('bespoke-nav-kbd', function() {
   var KEY = { spaceBar: 32, pageUp: 33, pageDown: 34, end: 35, home: 36, left: 37, right: 39 },
     deck,
     inputBox = null,
@@ -22,7 +22,7 @@ describe('bespoke-keynav', function() {
       }
 
       deck = bespoke.from(parent, [
-        keynav(),
+        navkbd(),
         forms()
       ]);
     },

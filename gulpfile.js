@@ -39,10 +39,10 @@ gulp.task('test', function(done) {
 });
 
 gulp.task('compile', ['clean'], function() {
-  return browserify({ standalone: 'bespoke.plugins.keynav' })
-    .add('./lib/bespoke-keynav.js')
+  return browserify({ standalone: 'bespoke.plugins.nav-kbd' })
+    .add('./lib/bespoke-nav-kbd.js')
     .bundle()
-    .pipe(source('bespoke-keynav.js'))
+    .pipe(source('bespoke-nav-kbd.js'))
     .pipe(buffer())
     .pipe(header([
       '/*!',
@@ -53,7 +53,7 @@ gulp.task('compile', ['clean'], function() {
       ' */\n\n'
     ].join('\n'), pkg))
     .pipe(gulp.dest('dist'))
-    .pipe(rename('bespoke-keynav.min.js'))
+    .pipe(rename('bespoke-nav-kbd.min.js'))
     .pipe(uglify())
     .pipe(header([
       '/*! <%= name %> v<%= version %> ',
@@ -80,7 +80,7 @@ gulp.task('compile:demo:js', ['compile'], function() {
   return gulp.src([
       'node_modules/bespoke/dist/bespoke.js',
       'node_modules/bespoke-classes/dist/bespoke-classes.js',
-      'dist/bespoke-keynav.js',
+      'dist/bespoke-nav-kbd.js',
       'node_modules/bespoke-forms/dist/bespoke-forms.js',
       'demo/demo.js'
   ])

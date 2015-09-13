@@ -1,6 +1,6 @@
 {
-  "name": "bespoke-keynav",
-  "main": "./dist/bespoke-keynav.js",
+  "name": "bespoke-nav-kbd",
+  "main": "./dist/bespoke-nav-kbd.js",
   "ignore": [
     "**/.*"
   ],
