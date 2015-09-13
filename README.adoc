@@ -69,8 +69,7 @@ bespoke.from('.deck', [
 == Credits
 
 This plugin is a fork of the official https://github.com/markdalgleish/bespoke-keys[bespoke-keys] plugin.
-This fork adds additional key bindings, does not capture events if a modifier key is pressed (except Shift + Space), has working tests and provides a cleanup routine.
-It is also more clearly named.
+This fork adds additional key bindings, does not capture events if a modifier key is pressed (except Shift + Space), has working tests, provides a cleanup routine and is more clearly named.
 
 == License
 
