@@ -135,7 +135,7 @@ module.exports = function() {
 (1)
 });
 /*!
- * bespoke-nav-kbd v1.0.0-dev
+ * bespoke-nav-kbd v1.0.1
  *
  * Copyright 2015, Dan Allen
  * This content is released under the MIT license
