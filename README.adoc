@@ -1,11 +1,12 @@
 = bespoke-nav-kbd
 Dan Allen <https://github.com/mojavelinux>
+v1.0.0
 // Settings:
 :idprefix:
 :idseparator: -
 ifdef::env-github[:badges:]
 // Variables:
-:release-version: master
+:release-version: v1.0.0
 // URIs:
 :uri-raw-file-base: https://raw.githubusercontent.com/opendevise/bespoke-nav-kbd/{release-version}
 
