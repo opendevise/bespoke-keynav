@@ -1,16 +1,17 @@
 = bespoke-nav-kbd
 Dan Allen <https://github.com/mojavelinux>
+v1.0.1
 // Settings:
 :idprefix:
 :idseparator: -
 ifdef::env-github[:badges:]
 // Variables:
-:release-version: v1.0.0
+:release-version: v1.0.1
 // URIs:
 :uri-raw-file-base: https://raw.githubusercontent.com/opendevise/bespoke-nav-kbd/{release-version}
 
 ifdef::badges[]
-//image:https://img.shields.io/npm/v/bespoke-nav-kbd.svg[npm package, link=https://www.npmjs.com/package/bespoke-nav-kbd]
+image:https://img.shields.io/npm/v/bespoke-nav-kbd.svg[npm package, link=https://www.npmjs.com/package/bespoke-nav-kbd]
 image:https://img.shields.io/travis/opendevise/bespoke-nav-kbd/master.svg[Build Status (Travis CI), link=https://travis-ci.org/opendevise/bespoke-nav-kbd]
 endif::[]
 
