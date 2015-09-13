@@ -14,7 +14,7 @@ ifdef::badges[]
 image:https://img.shields.io/travis/opendevise/bespoke-nav-kbd/master.svg[Build Status (Travis CI), link=https://travis-ci.org/opendevise/bespoke-nav-kbd]
 endif::[]
 
-Adds keyboard navigation to a http://markdalgleish.com/projects/bespoke.js[Bespoke.js] presentation.
+Adds keyboard (kbd) navigation to a http://markdalgleish.com/projects/bespoke.js[Bespoke.js] presentation.
 
 == Example
 
