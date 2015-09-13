@@ -62,7 +62,7 @@ When using a browser global:
 
 ```js
 bespoke.from('.deck', [
-  bespoke.plugins.nav-kbd()
+  bespoke.plugins.navkbd()
 ]);
 ```
 

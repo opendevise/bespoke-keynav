@@ -39,7 +39,7 @@ gulp.task('test', function(done) {
 });
 
 gulp.task('compile', ['clean'], function() {
-  return browserify({ standalone: 'bespoke.plugins.nav-kbd' })
+  return browserify({ standalone: 'bespoke.plugins.navkbd' })
     .add('./lib/bespoke-nav-kbd.js')
     .bundle()
     .pipe(source('bespoke-nav-kbd.js'))
