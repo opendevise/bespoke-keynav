@@ -20,7 +20,6 @@ describe('bespoke-nav-kbd', function() {
         }
         parent.appendChild(slide);
       }
-
       deck = bespoke.from(parent, [
         navkbd(),
         forms()
