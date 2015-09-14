@@ -6,7 +6,7 @@ var simulant = require('simulant'),
   forms = require('bespoke-forms');
 
 describe('bespoke-nav-kbd', function() {
-  var KEY = { spaceBar: 32, pageUp: 33, pageDown: 34, end: 35, home: 36, left: 37, right: 39 },
+  var KEY = { spaceBar: 32, pageUp: 33, pageDown: 34, end: 35, home: 36, left: 37, right: 39, h: 72, l: 76 },
     deck,
     inputBox = null,
     createDeck = function() {
@@ -61,6 +61,11 @@ describe('bespoke-nav-kbd', function() {
       expect(deck.slide()).toBe(1);
     });
 
+    it('should go to next slide when l is pressed', function() {
+      pressKey(KEY.l);
+      expect(deck.slide()).toBe(1);
+    });
+
     it('should not go to next slide when right arrow and modifier key are pressed', function() {
       pressKey(KEY.right, { shiftKey: true });
       expect(deck.slide()).toBe(0);
@@ -84,6 +89,11 @@ describe('bespoke-nav-kbd', function() {
 
     it('should go to previous slide when page up is pressed', function() {
       pressKey(KEY.pageUp);
+      expect(deck.slide()).toBe(0);
+    });
+
+    it('should go to previous slide when h is pressed', function() {
+      pressKey(KEY.h);
       expect(deck.slide()).toBe(0);
     });
 
