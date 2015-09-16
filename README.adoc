@@ -3,6 +3,7 @@ Dan Allen <https://github.com/mojavelinux>
 // Settings:
 :idprefix:
 :idseparator: -
+:experimental:
 ifdef::env-github[:badges:]
 // Variables:
 :release-version: v1.0.2
@@ -66,10 +67,33 @@ bespoke.from('.deck', [
 ]);
 ```
 
+=== Behavior
+
+This plugin activates the following keybindings:
+
+[width=50%]
+|===
+|Function |Shortcut(s)
+
+|Next Slide
+|kbd:[->], kbd:[Space], kbd:[PageDown], kbd:[l]
+
+|Previous Slide
+|kbd:[<-], kbd:[Shift+Space], kbd:[PageUp], kbd:[h]
+
+|First Slide
+|kbd:[Home]
+
+|Last Slide
+|kbd:[End]
+|===
+
+NOTE: These keybindings are not triggered if a modifier key (e.g., kbd:[Ctrl]) is pressed (with the exception of kbd:[Shift+Space]).
+
 == Credits
 
 This plugin is a fork of the official https://github.com/markdalgleish/bespoke-keys[bespoke-keys] plugin by Mark Dalgleish.
-This fork adds additional key bindings, does not capture events if a modifier key is pressed (except Shift + Space), has working tests, provides a cleanup routine and is more clearly named.
+This fork adds additional key bindings, does not capture events if a modifier key is pressed (except kbd:[Shift+Space]), has working tests, provides a cleanup routine and is more clearly named.
 
 == License
 
