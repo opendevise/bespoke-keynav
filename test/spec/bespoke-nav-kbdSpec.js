@@ -53,20 +53,26 @@ describe('bespoke-nav-kbd', function() {
     it('should go to next slide when right arrow is pressed', function() {
       pressKey(KEY.right);
       expect(deck.slide()).toBe(1);
+      pressKey(KEY.right, { shiftKey: true});
+      expect(deck.slide()).toBe(2);
     });
 
     it('should go to next slide when page down is pressed', function() {
       pressKey(KEY.pageDown);
       expect(deck.slide()).toBe(1);
+      pressKey(KEY.pageDown, { shiftKey: true});
+      expect(deck.slide()).toBe(2);
     });
 
     it('should go to next slide when l is pressed', function() {
       pressKey(KEY.l);
       expect(deck.slide()).toBe(1);
+      pressKey(KEY.l, { shiftKey: true});
+      expect(deck.slide()).toBe(2);
     });
 
-    it('should not go to next slide when right arrow and modifier key are pressed', function() {
-      pressKey(KEY.right, { shiftKey: true });
+    it('should not go to next slide when both right arrow and modifier key are pressed', function() {
+      pressKey(KEY.right, { altKey: true });
       expect(deck.slide()).toBe(0);
       pressKey(KEY.right, { ctrlKey: true });
       expect(deck.slide()).toBe(0);
@@ -79,38 +85,44 @@ describe('bespoke-nav-kbd', function() {
   });
 
   describe('navigate to previous slide', function() {
-    beforeEach(function() { deck.slide(1); });
+    beforeEach(function() { deck.slide(2); });
 
     it('should go to previous slide when left arrow is pressed', function() {
       pressKey(KEY.left);
+      expect(deck.slide()).toBe(1);
+      pressKey(KEY.left, { shiftKey: true});
       expect(deck.slide()).toBe(0);
     });
 
     it('should go to previous slide when page up is pressed', function() {
       pressKey(KEY.pageUp);
+      expect(deck.slide()).toBe(1);
+      pressKey(KEY.pageUp, { shiftKey: true});
       expect(deck.slide()).toBe(0);
     });
 
     it('should go to previous slide when h is pressed', function() {
       pressKey(KEY.h);
+      expect(deck.slide()).toBe(1);
+      pressKey(KEY.h, { shiftKey: true});
       expect(deck.slide()).toBe(0);
     });
 
     it('should go to previous slide when shift and space bar are pressed', function() {
       pressKey(KEY.spaceBar, { shiftKey: true });
-      expect(deck.slide()).toBe(0);
+      expect(deck.slide()).toBe(1);
     });
 
-    it('should not go to previous slide when left arrow and modifier key are pressed', function() {
-      pressKey(KEY.left, { shiftKey: true});
-      expect(deck.slide()).toBe(1);
+    it('should not go to previous slide when both left arrow and modifier key are pressed', function() {
+      pressKey(KEY.left, { altKey: true});
+      expect(deck.slide()).toBe(2);
       pressKey(KEY.left, { ctrlKey: true});
-      expect(deck.slide()).toBe(1);
+      expect(deck.slide()).toBe(2);
     });
 
     it('should not go to previous slide when shift and space bar are pressed in input field', function() {
       pressKey(KEY.spaceBar, {}, inputBox);
-      expect(deck.slide()).toBe(1);
+      expect(deck.slide()).toBe(2);
     });
   });
 

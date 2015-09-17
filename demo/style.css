@@ -16,8 +16,9 @@ h1 {
   margin: 0;
 }
 
-p {
+p, ul {
   margin: 0.25em 0;
+  font-size: 0.85em;
 }
 
 input[type='text'] {
@@ -83,4 +84,15 @@ input[type='text'] {
   opacity: 1;
   pointer-events: auto;
   z-index: 1;
+}
+
+ul.step {
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.bespoke-inactive .bespoke-bullet,
+.bespoke-bullet-inactive {
+  visibility: hidden;
 }
