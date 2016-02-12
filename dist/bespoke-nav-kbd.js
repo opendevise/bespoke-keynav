@@ -17,8 +17,8 @@ module.exports = function() {
         if (!modified(e, e.which)) {
           switch(e.which) {
             case KEY_SP: return (e.shiftKey ? deck.prev : deck.next)();
-            case KEY_RT: case KEY_PGDN: case KEY_L: return e.shiftKey ? deck.slide(deck.slide() + 1) : deck.next();
-            case KEY_LT: case KEY_PGUP: case KEY_H: return e.shiftKey ? deck.slide(deck.slide() - 1) : deck.prev();
+            case KEY_RT: case KEY_PGDN: case KEY_L: return deck.next();
+            case KEY_LT: case KEY_PGUP: case KEY_H: return deck.prev();
             case KEY_HME: return deck.slide(0);
             case KEY_END: return deck.slide(deck.slides.length - 1);
           }
