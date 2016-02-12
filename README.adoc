@@ -67,7 +67,7 @@ bespoke.from('.deck', [
 ]);
 ```
 
-=== Behavior
+== Behavior
 
 This plugin activates the following keybindings:
 
