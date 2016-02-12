@@ -82,6 +82,7 @@ gulp.task('compile:demo:js', ['compile'], function() {
       'node_modules/bespoke-classes/dist/bespoke-classes.js',
       'dist/bespoke-nav-kbd.js',
       'node_modules/bespoke-forms/dist/bespoke-forms.js',
+      'node_modules/bespoke-bullets/dist/bespoke-bullets.js',
       'demo/demo.js'
   ])
   .pipe(concat('build.js'))
