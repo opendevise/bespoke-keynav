@@ -1,6 +1,6 @@
 {
   "name": "bespoke-nav-kbd",
-  "version": "1.0.3-dev",
+  "version": "1.0.3",
   "description": "Adds keyboard (kbd) navigation to a Bespoke.js presentation.",
   "homepage": "https://github.com/opendevise/bespoke-nav-kbd",
   "bugs": "https://github.com/opendevise/bespoke-nav-kbd/issues",

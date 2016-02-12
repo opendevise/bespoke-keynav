@@ -1,5 +1,5 @@
 /*!
- * bespoke-nav-kbd v1.0.3-dev
+ * bespoke-nav-kbd v1.0.3
  *
  * Copyright 2016, Dan Allen
  * This content is released under the MIT license
