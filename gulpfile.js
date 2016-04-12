@@ -4,11 +4,11 @@ var pkg = require('./package.json'),
   concat = require('gulp-concat'),
   del = require('del'),
   gulp = require('gulp'),
-  gutil = require('gulp-util'),
+  util = require('gulp-util'),
   header = require('gulp-header'),
   jshint = require('gulp-jshint'),
   karma = require('karma'),
-  ghpages = require('gh-pages'),
+  pages = require('gh-pages'),
   path = require('path'),
   rename = require('gulp-rename'),
   replace = require('gulp-replace'),
@@ -91,5 +91,5 @@ gulp.task('compile:demo:js', ['compile'], function() {
 });
 
 gulp.task('deploy', ['compile:demo'], function(done) {
-  ghpages.publish(path.join(__dirname, 'demo/dist'), { logger: gutil.log }, done);
+  pages.publish(path.join(__dirname, 'demo/dist'), { logger: util.log }, done);
 });
